@@ -1,0 +1,23 @@
+<html>
+	<head>
+		<title>Ajax Test</title>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script>
+    	$(document).ready(function(){
+    		$("#click").on("click", function(){
+			   $.ajax({
+			        type: 'GET',
+			        url: '/ajax',
+			        success: function() {
+			            console.log("this is the part that doesn't work"); // As stated, for some reason even though the file is being successfully written to via this post function, nothing works here.
+			        }
+			    });
+    		})
+    	});
+    </script>
+	</head>
+	<body>
+		<h1>TEST</h1>
+		<button id="click">a</button>
+	</body>
+</html>
